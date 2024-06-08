@@ -1,0 +1,17 @@
+settings.py
+__pycache__
+/venv
+*.log
+*.pot
+*.pyc
+*.db
+*.svg
+*.sqlite3
+*.jpg
+*.png
+*.xml
+*.csv
+*.ttf
+*.env
+*.env.docker
+
