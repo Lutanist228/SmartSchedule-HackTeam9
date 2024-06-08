@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="rus">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Вход</title>
+        <link rel="stylesheet" href="{% static 'login_app/styles/login.css' %}">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <section class="fullscreen">
+                <div class="fullscreen__body">
+                    <form class="auth_form" method="post" enctype="multipart/form-data">
+                        <div class="login_inp">
+                            <h3>Введите логин</h3>
+                            <input type="text" name="userlogin" value="">
+                        </div>
+                        <div class="password_inp">
+                            <h3>Введите пароль</h3>
+                            <input type="password" name="userpass_type" value="">
+                        </div>
+                        <div><p></p></div>
+                    </form>
+                    <a href="manager" class="login_link">Войти</a>
+                </div>
+            </section>
+        </div>
+    </body>
+
+    <footer>
+        <aside class="footer">
+            {% comment %} <div><p>Контакты</p></div> {% endcomment %}
+        </aside>
+    </footer>
+</html>
+
+
