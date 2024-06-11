@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="rus">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=1600">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Главное меню</title>
+        <link rel="stylesheet" href="{% static 'schedule_app/styles/main_page.css' %}">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <section class="fullscreen">
+                <div class="fullscreen__body">
+
+                    <aside class="upper_tableau">
+                        <div class="empl_info" style="min-width: 100%; background-color: rgb(244,244,244);"><p>*Информация о Врачах\Враче*</p></div>
+                    </aside>
+
+                    {% comment %} динамический контент {% endcomment %}
+                    {% comment %} <aside class="upper_tableau">
+                        <div class="empl_info" style="min-width: 70%; background-color: rgb(244,244,244);"><p>*Информация о Врачах\Враче*</p></div>
+                        <div class="change_empl"><p>*Изменить Информацию о Врачах\Враче*</p></div>
+                    </aside> {% endcomment %}
+                    {% comment %} динамический контент {% endcomment %}
+
+                    <div class="grid-menu">
+
+                        <div class="left_menu">
+                            <div class="empl all"><p>Все врачи</p></div>
+                            <div class="empl n"><p>Врач №n</p></div>
+                            <div class="empl n+1"><p>Врач №n + 1</p></div>
+                            <div class="empl n+2"><p>Врач №n + 2</p></div>
+                            <div class="empl n+3"><p>Врач №n + 3</p></div>
+
+                            {% comment %} динамический контент {% endcomment %}
+                            {% comment %} <div class="empl n+3"><p>Врач №n + 3</p></div> {% comment %}
+                            {% comment %} <div class="empl n+3"><p>Врач №n + 3</p></div> {% comment %}
+                            {% comment %} <div class="empl n+3"><p>Врач №n + 3</p></div> {% comment %}
+                            {% comment %} <div class="empl n+3"><p>Врач №n + 3</p></div> {% comment %}
+                            {% comment %} <div class="empl n+3"><p>Врач №n + 3</p></div> {% comment %}
+                            {% comment %} динамический контент {% endcomment %}
+                        </div>
+
+                        <div class="right_block">
+                            <aside class="button_menu">
+                                <div class="button make_filt"><p>Применить Фильтр</p></div>
+                                <div class="button load_inf"><p>Выгрузить Информацию</p></div>
+                                <div class="button change_graph"><p>Изменить График</p></div>
+                                <div class="button conf_changes"><p>Утвердить Изменения в Кадровой Информации</p></div>
+                            </aside>    
+
+                            <div class="schedule">
+                                <div class="day n-1"><p>Понедельник</p></div>
+                                <div class="day n-2"><p>Вторник</p></div>
+                                <div class="day n-3"><p>Среда</p></div>
+                                <div class="day n-4"><p>Четверг</p></div>
+                                <div class="day n-5"><p>Пятница</p></div>
+                                <div class="day n-6"><p>Суббота</p></div>
+                                <div class="day n-7"><p>Воскресенье</p></div>
+                            
+                            {% comment %} динамический контент {% endcomment %}
+                            {% comment %} ... ... {% comment %}
+                            {% comment %} динамический контент {% endcomment %}
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </body>
+
+    <footer>
+        <aside class="footer">
+        </aside>
+    </footer>
+</html>
+
+
+
+
+
+
+
+

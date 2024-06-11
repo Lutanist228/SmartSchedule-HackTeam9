@@ -22,7 +22,7 @@ body {
 .fullscreen {
     background-color: rgb(195,215,216);
     display: flex;
-    min-height: 75vh;
+    min-height: 85vh;
     padding: 2%;
     align-items: center
 }
@@ -32,14 +32,13 @@ a {
 }
 
 .fullscreen__body {
+    display: flex;
     background-color: rgb(237, 238, 226);
     flex: 1 1 auto;
     max-width: 300px;
     min-height: 100px;
     margin: 0px auto;
     text-align: center;
-    display: grid;
-    grid-gap: 15px;
     flex-direction: column;
     justify-content: center;
     border-radius: 20px;
@@ -57,6 +56,8 @@ div.fullscreen__body > .login_link {
 }
 
 div.fullscreen__body > .auth_form {
+    display: grid;
+    grid-gap: 15px;
     text-decoration: solid;
     color: rgb(39, 49, 59);
     text-align: center;
