@@ -1,0 +1,16 @@
+{% extends "schedule_app/index.html" %}
+{% load static %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'schedule_app/styles/empl_frame.css' %}">
+{% endblock %}
+
+{% block outer_frame %}
+<form action="{% url 'add_empl' %}" method="post" class="adding_empl-frame">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Подтвердить</button>
+    <button type="reset">Сбросить</button>
+</form>
+{% endblock %}
+

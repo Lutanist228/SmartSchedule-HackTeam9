@@ -9,6 +9,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Главное меню</title>
         <link rel="stylesheet" href="{% static 'schedule_app/styles/main_page.css' %}">
+        {% block stylesheet %}
+        {% endblock %}
     </head>
 
     <body>
@@ -28,30 +30,26 @@
                     {% comment %} динамический контент {% endcomment %}
 
                     <div class="grid-menu">
-
                         <div class="left_menu">
                             <div class="empl all"><p>Все врачи</p></div>
-                            <div class="empl n"><p>Врач №n</p></div>
-                            <div class="empl n+1"><p>Врач №n + 1</p></div>
-                            <div class="empl n+2"><p>Врач №n + 2</p></div>
-                            <div class="empl n+3"><p>Врач №n + 3</p></div>
 
-                            {% comment %} динамический контент {% endcomment %}
-                            {% comment %} <div class="empl n+3"><p>Врач №n + 3</p></div> {% comment %}
-                            {% comment %} <div class="empl n+3"><p>Врач №n + 3</p></div> {% comment %}
-                            {% comment %} <div class="empl n+3"><p>Врач №n + 3</p></div> {% comment %}
-                            {% comment %} <div class="empl n+3"><p>Врач №n + 3</p></div> {% comment %}
-                            {% comment %} <div class="empl n+3"><p>Врач №n + 3</p></div> {% comment %}
-                            {% comment %} динамический контент {% endcomment %}
+                            {% for key, value in empl_dict.items %}
+                            <div class="empl {{ key }}"><p>{{ value }}</p></div>
+                            {% endfor %}
+                            <div class="add_empl"><a class="lmenu_link" href="add_empl">Добавить врача</a></div>
                         </div>
 
                         <div class="right_block">
+                            
                             <aside class="button_menu">
                                 <div class="button make_filt"><p>Применить Фильтр</p></div>
                                 <div class="button load_inf"><p>Выгрузить Информацию</p></div>
                                 <div class="button change_graph"><p>Изменить График</p></div>
                                 <div class="button conf_changes"><p>Утвердить Изменения в Кадровой Информации</p></div>
                             </aside>    
+
+                            {% block outer_frame %}
+                            {% endblock %}
 
                             <div class="schedule">
                                 <div class="day n-1"><p>Понедельник</p></div>
