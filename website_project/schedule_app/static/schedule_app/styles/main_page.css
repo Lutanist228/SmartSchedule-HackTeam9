@@ -100,7 +100,7 @@ body {
     row-gap: 8px;
 }
 
-.left_menu .add_empl,.add_dep {
+.left_menu .add_empl,.add_dep, .check_dep {
     background-color: rgb(237, 238, 226);
     min-height: 10vh;
     align-content: center;
