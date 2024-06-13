@@ -32,11 +32,13 @@
                     <div class="grid-menu">
                         <div class="left_menu">
                             <div class="empl all"><p>Все врачи</p></div>
-
                             {% for key, value in empl_dict.items %}
                             <div class="empl {{ key }}"><p>{{ value }}</p></div>
                             {% endfor %}
-                            <div class="add_empl"><a class="lmenu_link" href="add_empl">Добавить врача</a></div>
+                            <div class="butt-adding">
+                                <div class="add_empl"><a class="lmenu_link" href="add_empl">Добавить врача</a></div>
+                                <div class="add_dep"><a class="lmenu_link" href="add_dep">Добавить департамент</a></div>
+                            </div>
                         </div>
 
                         <div class="right_block">

@@ -93,7 +93,14 @@ body {
     align-content: center;
 }
 
-.left_menu .add_empl {
+.left_menu .butt-adding {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    row-gap: 8px;
+}
+
+.left_menu .add_empl,.add_dep {
     background-color: rgb(237, 238, 226);
     min-height: 10vh;
     align-content: center;
@@ -101,7 +108,9 @@ body {
     align-self: center;
     border-radius: 25px;
     margin-left: 8px;
-    text-transform: lowercase;
+    text-transform: uppercase;
+    font-size: calc(1px + 1vw);
+    text-decoration: none;
 }
 
 div.right_block > aside.button_menu .button {

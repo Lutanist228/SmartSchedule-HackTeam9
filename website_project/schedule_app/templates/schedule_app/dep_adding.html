@@ -2,14 +2,14 @@
 {% load static %}
 
 {% block stylesheet %}
-<link rel="stylesheet" href="{% static 'schedule_app/styles/empl_frame.css' %}">
+<link rel="stylesheet" href="{% static 'schedule_app/styles/dep_frame.css' %}">
 {% endblock %}
 
 {% block outer_frame %}
-<form class="adding_empl-frame" action="{% url 'add_empl' %}" method="post">
+<form class="adding_dep-frame" action="{% url 'add_dep' %}" method="post">
     {% csrf_token %}
     <div class="input-block-1">
-        {% for f in pers_form %}
+        {% for f in dep_form %}
         <p><label class="label number-{{ forloop.counter }}" for="{{ f.id_for_label }}">{{ f.label }}: </label>{{ f }}</p>
         {% endfor %}
     </div>
