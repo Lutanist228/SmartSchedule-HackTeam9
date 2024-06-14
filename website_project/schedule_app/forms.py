@@ -6,7 +6,7 @@ class AddEmployee(forms.ModelForm):
     # surname = forms.CharField(max_length=255, label="Фамилия")
     # patronymic = forms.CharField(max_length=255, label="Отчество")
     # snils = forms.CharField(max_length=255, label="СНИЛС")
-    attach_to_dep = forms.ModelChoiceField(queryset=DepInfo.objects.values("id"), label="Идентификатор Отдела")
+    # attach_to_dep = forms.ModelChoiceField(queryset=DepInfo.objects.values("id"), label="Идентификатор Отдела")
 
     class Meta:
         model = MedEmployees

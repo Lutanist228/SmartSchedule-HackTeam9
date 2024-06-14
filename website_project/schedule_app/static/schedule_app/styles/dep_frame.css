@@ -41,7 +41,7 @@ input {
     justify-content: center
 }
 
-button {
+button, input.back_page {
     background-color: rgb(72, 72, 72);
     font-size: small;
     text-transform: uppercase;
@@ -49,9 +49,12 @@ button {
     border-radius: 25px;
     width: 150px;
     height: 40px;
+    align-content: center;
+} 
+
+a {
+    text-decoration: none;
 }
-
-
 
 
 

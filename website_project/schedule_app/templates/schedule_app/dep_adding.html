@@ -5,6 +5,10 @@
 <link rel="stylesheet" href="{% static 'schedule_app/styles/dep_frame.css' %}">
 {% endblock %}
 
+{% block button %}
+<div class="add_empl">Добавить врача</div>
+{% endblock %}
+
 {% block outer_frame %}
 <form class="adding_dep-frame" action="{% url 'add_dep' %}" method="post">
     {% csrf_token %}
@@ -16,6 +20,8 @@
     <div class="butt-block">
         <button type="submit">Подтвердить</button>
         <button type="reset">Сбросить</button>
+        <input type="button" onclick="history.back();" value="back_page"/>
+        {% comment %} <a class="back_link" href=''><div class="close">Закрыть форму</div></a> {% endcomment %}
     </div>
 </form>
 {% endblock %}

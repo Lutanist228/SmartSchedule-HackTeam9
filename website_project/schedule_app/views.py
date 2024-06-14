@@ -20,7 +20,7 @@ def add_empl_pg(request):
         if pers_form.is_valid():
             pers_form.save() # сохранение в бд
             print(pers_form.cleaned_data)
-            return redirect('')
+            return redirect('add_empl')
     else:    
         pers_form = AddEmployee()
                 

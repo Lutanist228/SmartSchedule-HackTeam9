@@ -36,9 +36,11 @@
                             <div class="empl {{ key }}"><p>{{ value }}</p></div>
                             {% endfor %}
                             <div class="butt-adding">
-                                <div class="add_empl"><a class="lmenu_link" href="add_empl">Добавить врача</a></div>
-                                <div class="add_dep"><a class="lmenu_link" href="add_dep">Добавить отдел</a></div>
-                                <div class="check_dep"><a class="dep_link" href="">Информация о текущих отделах</a></div>
+                                {% block button %}
+                                <a class="lmenu_link" href="add_empl"><div class="add_empl">Добавить врача</div></a>
+                                {% endblock %}
+                                {% comment %} <div class="add_dep"><a class="lmenu_link" href="add_dep">Добавить отдел</a></div>
+                                <div class="check_dep"><a class="dep_link" href="">Информация о текущих отделах</a></div> {% endcomment %}
                             </div>
                         </div>
 
