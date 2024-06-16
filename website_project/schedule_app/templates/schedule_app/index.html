@@ -19,28 +19,21 @@
                 <div class="fullscreen__body">
 
                     <aside class="upper_tableau">
+                        {% block tableau %}
                         <div class="empl_info" style="min-width: 100%; background-color: rgb(244,244,244);"><p>*Информация о Врачах\Враче*</p></div>
+                        {% endblock  %}
                     </aside>
-
-                    {% comment %} динамический контент {% endcomment %}
-                    {% comment %} <aside class="upper_tableau">
-                        <div class="empl_info" style="min-width: 70%; background-color: rgb(244,244,244);"><p>*Информация о Врачах\Враче*</p></div>
-                        <div class="change_empl"><p>*Изменить Информацию о Врачах\Враче*</p></div>
-                    </aside> {% endcomment %}
-                    {% comment %} динамический контент {% endcomment %}
 
                     <div class="grid-menu">
                         <div class="left_menu">
-                            <div class="empl all"><p>Все врачи</p></div>
+                            <a class="empl_link" href="empl_pg/0"><div class="empl all"><p>Все врачи</p></div></a>
                             {% for key, value in empl_dict.items %}
-                            <div class="empl {{ key }}"><p>{{ value }}</p></div>
+                            <a class="empl_link" href="empl_pg/{{ key }}"><div class="empl {{ key }}"><p>{{ value }}</p></div></a>
                             {% endfor %}
                             <div class="butt-adding">
                                 {% block button %}
                                 <a class="lmenu_link" href="add_empl"><div class="add_empl">Добавить врача</div></a>
                                 {% endblock %}
-                                {% comment %} <div class="add_dep"><a class="lmenu_link" href="add_dep">Добавить отдел</a></div>
-                                <div class="check_dep"><a class="dep_link" href="">Информация о текущих отделах</a></div> {% endcomment %}
                             </div>
                         </div>
 

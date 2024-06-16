@@ -3,17 +3,16 @@ from django.http import HttpResponse
 import os
 from .models import *
 from .forms import *
+from .inner_scripts.additional_functions import * 
 
 # Create your views here.
 def index(request):
-    empl = MedEmployees.objects.values("first_name", "last_name", "patronymic")
-    empl = {key + 1:f"{value['patronymic']} {value['first_name'][0]}.{value['last_name'][0]}." for key, value in enumerate(empl)}
+    empl = empl_display()
 
     return render(request, "schedule_app/index.html", {"empl_dict": empl}) 
 
 def add_empl_pg(request):
-    empl = MedEmployees.objects.values("first_name", "last_name", "patronymic")
-    empl = {key + 1:f"{value['patronymic']} {value['first_name'][0]}.{value['last_name'][0]}." for key, value in enumerate(empl)}
+    empl = empl_display()
     
     if request.method == "POST":
         pers_form = AddEmployee(request.POST)
@@ -27,8 +26,7 @@ def add_empl_pg(request):
     return render(request, "schedule_app/empl_adding.html", {"pers_form":pers_form, "empl_dict": empl})
 
 def add_dep_pg(request):
-    empl = MedEmployees.objects.values("first_name", "last_name", "patronymic")
-    empl = {key + 1:f"{value['patronymic']} {value['first_name'][0]}.{value['last_name'][0]}." for key, value in enumerate(empl)}
+    empl = empl_display()
     
     if request.method == "POST":
         dep_form = DepInfo(request.POST)
@@ -40,3 +38,12 @@ def add_dep_pg(request):
         dep_form = DepInfo()
 
     return render(request, "schedule_app/dep_adding.html", {"dep_form":dep_form, "empl_dict": empl})
+
+def empl_proc(request, empl_id):
+    all_empl, curr_empl = empl_display(), empl_display(False, empl_id)
+    
+    return render(request, "schedule_app/empl_table.html", {"empl_dict": all_empl, "curr_empl": curr_empl}) 
+    
+    
+    
+

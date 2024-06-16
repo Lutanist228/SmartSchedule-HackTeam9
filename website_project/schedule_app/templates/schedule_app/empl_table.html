@@ -1,0 +1,16 @@
+{% extends "schedule_app/index.html" %}
+{% load static %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'schedule_app/styles/empl_page.css' %}">
+{% endblock %}
+
+{% block tableau %}
+<div class="empl_info" style="min-width: 100%; background-color: rgb(244,244,244);"><p>{{ curr_empl }}</p></div>
+{% endblock %}
+
+
+
+
+
+

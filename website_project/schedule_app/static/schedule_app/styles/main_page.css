@@ -83,13 +83,28 @@ body {
     align-content: stretch;
     text-decoration: solid;
     text-transform: uppercase;
-    font-size: calc(1px + 1vw);
+    font-size: calc(5px + 0.5vw);
+    margin-bottom: 8px;
 }
 
 .left_menu .empl {
     background-color: rgb(195,215,216);
     min-height: 10vh;
     align-content: center;
+    justify-content: center;
+    transition-duration: 0.5s;
+    padding: 8px;
+    word-break: break-all
+}
+
+.left_menu .empl:hover {
+    background-color: rgb(122,157,151);
+    transition-duration: 0.5s;
+}
+
+.left_menu .empl:hover p {
+    color: rgb(237, 238, 226);
+    transition-duration: 0.5s;
 }
 
 .left_menu .butt-adding {
@@ -131,6 +146,7 @@ div.right_block aside.button_menu {
     margin-right: 15em;
     flex-direction: row;
     grid-template-columns: repeat(auto-fill, 100%);
+    word-break: break-all;
 }
 
 div.right_block div.schedule {
